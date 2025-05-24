@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
@@ -26,9 +27,7 @@
         </button>
         <ul class="nav-list">
           <li><a href="index.php" aria-current="page">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#process">Process</a></li>
+          <li><a href="aboutus.php">About Us</a></li>
           <li><a href="map.php">Map</a></li>
           <li><a href="report.php">Submit Report</a></li>
           <li><a href="/login" class="btn login-btn">Login</a></li>
@@ -105,17 +104,20 @@
         <div class="footer-links">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#about">About Us</a></li>
+            <li><a href="aboutus.php">About Us</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-social">
-          <h3>Follow Us</h3>
-          <a href="https://facebook.com" aria-label="Facebook"><img src="images/facebook-icon.png" alt=""></a>
-          <a href="https://twitter.com" aria-label="Twitter"><img src="images/twitter-icon.png" alt=""></a>
-          <a href="https://instagram.com" aria-label="Instagram"><img src="images/instagram-icon.png" alt=""></a>
-        </div>
+  <p>Follow Us</p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</div>
       </div>
       <p class="copyright">© 2025 TrashTrack Kosovo. All rights reserved.</p>
     </div>
