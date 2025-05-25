@@ -30,7 +30,8 @@
           <li><a href="aboutus.php">About Us</a></li>
           <li><a href="map.php">Map</a></li>
           <li><a href="report.php">Submit Report</a></li>
-          <li><a href="/login" class="btn login-btn">Login</a></li>
+          <li><a href="login.php" class="btn login-btn">Login</a></li>
+          <li><a href="signup.php" class="btn signup-btn">Sign Up</a></li>
         </ul>
       </nav>
     </div>
@@ -105,8 +106,8 @@
           <h3>Quick Links</h3>
           <ul>
             <li><a href="aboutus.php">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="map.php">Map</a></li>
+            <li><a href="report.php">Submit Report</a></li>
           </ul>
         </div>
         <div class="footer-social">

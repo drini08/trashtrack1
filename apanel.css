@@ -1,0 +1,90 @@
+ body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: bold;
+      float: right;
+      margin-bottom: 20px;
+      margin-right: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    th, td {
+      padding: 16px;
+      border-bottom: 1px solid #ecf0f1;
+      text-align: left;
+    }
+
+    th {
+      background: #084908;
+      color: white;
+      font-weight: normal;
+    }
+
+    img {
+      border-radius: 6px;
+      max-height: 80px;
+    }
+
+    form input[type="text"] {
+      padding: 6px;
+      width: 80%;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      padding: 6px 12px;
+      background: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+
+    form button:hover {
+      background: #1e8449;
+    }
+
+    .delete-link {
+      color: #e74c3c;
+      color: black;
+    }
+
+    .delete-link:hover {
+      text-decoration: underline;
+    }
+
+   .btn-green {
+  background-color: #28a745 !important;  /* important to override */
+  color: white !important;
+  border: none !important;
+}
+
+.btn-green:hover,
+.btn-green:focus {
+  background-color: #218838 !important;
+  color: white !important;
+  text-decoration: none !important;
+  box-shadow: 0 0 8px rgba(33, 136, 56, 0.7) !important;
+}

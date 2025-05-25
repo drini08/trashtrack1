@@ -8,138 +8,13 @@
   <meta charset="UTF-8" />
   <title>About Us | TrashTrack Kosovo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <link href="aboutus.css" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f0f7f4;
-    }
-
-    .site-header, .site-footer {
-      background-color:rgb(42, 59, 32);
-      color: white;
-      padding: 20px 0;
-    }
-
-    /* Logo container (optional, if used) */
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-/* Logo image */
-.logo-image img {
-  height: 40px;        /* Smaller height */
-  width: auto;
-  max-width: 120px;    /* Reduce max width */
-  display: block;
-}
-
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .main-nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    .main-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;         /* Make nav text bigger */
-  padding: 8px 12px;
-  transition: all 0.2s ease;
-}
-
-.main-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
-  transform: scale(1.05);  /* Slight zoom effect */
-}
-
-    .about-main {
-      padding: 50px 40px;
-      background-color: #ffffff;
-    }
-
-    .hero {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .hero h1 {
-      font-size: 36px;
-      color: #2c3e50;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: #555;
-    }
-
-    .about-section {
-      max-width: 900px;
-      margin: 0 auto 40px auto;
-      padding: 0 20px;
-    }
-
-    .about-section h2 {
-      color: #3a7d44;
-      margin-bottom: 10px;
-    }
-
-    .about-section p,
-    .about-section ul,
-    .about-section ol {
-      color: #444;
-      line-height: 1.6;
-    }
-
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-
-    .footer-logo img {
-      width: 120px;
-    }
-
-    .footer-links h3, .footer-social p {
-      margin-bottom: 10px;
-    }
-
-    .footer-links ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .footer-links a {
-      color: white;
-      text-decoration: none;
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    .social-icons a {
-      color: white;
-      margin-right: 10px;
-      font-size: 20px;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
 </head>
-<body>
+<body class="about">
+
 
 <!-- HEADER -->
 <header class="site-header">
@@ -153,6 +28,8 @@
         <li><a href="aboutus.php" class="active">About Us</a></li>
         <li><a href="map.php">Map</a></li>
         <li><a href="report.php"> Submit Report</a></li>
+        <li><a href="login.php" class="btn login-btn">Login</a></li>
+        <li><a href="signup.php" class="btn signup-btn">Sign Up</a></li>
       </ul>
     </nav>
   </div>
@@ -202,6 +79,7 @@
   <section class="about-section">
     <h2>Join the Movement</h2>
     <p>Whether you're a concerned citizen, organization, or municipality, you can make a difference. Report trash, spread the word, and be a part of the zero-waste movement!</p>
+    <a href="report.php" class="join-button">Join</a>
   </section>
 </main>
 
@@ -218,7 +96,7 @@
         <li><a href="index.php">Home</a></li>
         <li><a href="aboutus.php">About</a></li>
         <li><a href="map.php">Map</a></li>
-        <li><a href="report.php">Report</a></li>
+        <li><a href="report.php">Submit Report</a></li>
       </ul>
     </div>
 
@@ -239,3 +117,7 @@
 
 </body>
 </html>
+
+<script>
+
+</script>

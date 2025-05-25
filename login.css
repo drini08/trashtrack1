@@ -1,0 +1,62 @@
+
+    body {
+      background-color: #e8f0ea;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .login-card {
+      max-width: 400px;
+      width: 100%;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+    }
+
+    .login-card .logo {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      margin-bottom: 20px;
+    }
+
+    .btn-green {
+      background-color: #14532d;
+      color: white;
+    }
+
+    .btn-green:hover {
+        color: white;
+      background-color: #0e3c22;
+    }
+  
+    .back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3a7d44;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 1000;
+  }
+
+  .back-button:hover {
+    background-color: #519b59;
+  }
+
+  .back-button svg {
+    fill: white;
+    width: 24px;
+    height: 24px;
+  }

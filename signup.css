@@ -1,0 +1,51 @@
+body {
+      background-color: #212529;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .signup-card {
+      background-color: #2c3036;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    }
+    .logo {
+      max-width: 100px;
+      margin-bottom: 1rem;
+    }
+    .btn-green {
+      background-color: #28a745;
+      border: none;
+    }
+    .btn-green:hover {
+      background-color: #218838;
+    }
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 40px;
+      height: 40px;
+      background-color: #6c757d;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .back-button:hover {
+      background-color: #495057;
+    }
+    .back-button svg {
+      stroke: white;
+      width: 24px;
+      height: 24px;
+    }

@@ -88,117 +88,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <meta charset="UTF-8" />
 <title>Submit Trash Report</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #f0f7f4;
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-  }
-  .container {
-    background: white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
-    max-width: 650px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  h1 {
-    text-align: center;
-    margin-bottom: 25px;
-    color: #2c3e50;
-  }
-  label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 600;
-    color: #34495e;
-  }
-  input[type="text"],
-  textarea,
-  input[type="file"] {
-    width: 100%;
-    max-width: 540px;
-    padding: 15px 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    background: #f9fbfd;
-    transition: border-color 0.3s ease;
-  }
-  input[type="text"]:focus,
-  textarea:focus,
-  input[type="file"]:focus {
-    border-color: #28a745;
-    outline: none;
-  }
-  textarea {
-    resize: vertical;
-    min-height: 80px;
-  }
-  input[type="submit"] {
-    background: #28a745;
-    border: none;
-    color: white;
-    font-weight: 700;
-    font-size: 18px;
-    padding: 14px;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s ease;
-  }
-  input[type="submit"]:hover {
-    background: #218838;
-  }
-  .message {
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: 600;
-  }
-  .success {
-    background-color: #d4edda;
-    color: #155724;
-  }
-  .error {
-    background-color: #f8d7da;
-    color: #721c24;
-  }
-
-  /* Back button styles */
-  .back-button {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #3a7d44;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    z-index: 1000;
-  }
-
-  .back-button:hover {
-    background-color: #519b59;
-  }
-
-  .back-button svg {
-    fill: white;
-    width: 24px;
-    height: 24px;
-  }
-</style>
+<!-- FontAwesome CDN -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+<!-- Link to the external CSS -->
+<link rel="stylesheet" href="report.css" />
 </head>
 <body>
 
@@ -208,33 +104,71 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   </svg>
 </a>
 
+<div class="page-wrapper">
+  <!-- Left side panel -->
+  <aside class="side-panel left-panel" aria-label="Information about reporting trash">
+    <h3><i class="fas fa-info-circle"></i> How to Report</h3>
+    <p>
+      Use the form to describe the trash or issue. Include a location and upload a photo if possible.
+    </p>
 
-<div class="container">
-  <h1>Submit Trash Report</h1>
+    <h3><i class="fas fa-question-circle"></i> FAQ</h3>
+    <ul class="faq-list">
+      <li><strong>Can I report anonymously?</strong> Yes, no personal info is required.</li>
+      <li><strong>What locations can I report?</strong> Any public places where trash is an issue.</li>
+      <li><strong>Is photo upload mandatory?</strong> It helps, but you can still report without it.</li>
+    </ul>
 
-  <?php if($message): ?>
-    <div class="message <?= $messageClass; ?>">
-      <?= htmlspecialchars($message); ?>
-    </div>
-  <?php endif; ?>
+    <a href="index.php" class="call-to-action" aria-label="Return to homepage">
+      <i class="fas fa-home"></i> Back to Home
+    </a>
+  </aside>
 
-  <form method="POST" enctype="multipart/form-data" action="">
-    <label for="description">Description</label>
-    <textarea id="description" name="description" required placeholder="Describe the trash or issue..."></textarea>
+  <!-- Main form container -->
+  <main class="container" role="main">
+    <h1>Submit Trash Report</h1>
 
-    <label for="location">Location</label>
-    <input type="text" id="location" name="location" required placeholder="Enter location (e.g. Ferizaj street)" />
+    <?php if ($message): ?>
+      <div class="message <?= htmlspecialchars($messageClass); ?>">
+        <?= htmlspecialchars($message); ?>
+      </div>
+    <?php endif; ?>
 
-    <label for="photo">Upload Photo</label>
-    <input type="file" id="photo" name="photo" accept="image/*" required />
-    <img id="preview-image" style="display:none; max-width: 100%; margin-top: 10px; border-radius: 8px;" alt="Image preview">
+    <form method="POST" enctype="multipart/form-data" action="">
+      <label for="description">Description</label>
+      <textarea id="description" name="description" required placeholder="Describe the trash or issue..."></textarea>
 
-    <input type="submit" value="Submit Report" />
-  </form>
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" required placeholder="Enter location (e.g. Ferizaj street)" />
+
+      <label for="photo">Upload Photo</label>
+      <input type="file" id="photo" name="photo" accept="image/*" />
+      <img id="preview-image" alt="Image preview" />
+
+      <input type="submit" value="Submit Report" />
+    </form>
+  </main>
+
+
+
+
+
+  <!-- Right side panel -->
+  <aside class="side-panel right-panel" aria-label="Join the zero waste movement">
+    <h3><i class="fas fa-hands-helping"></i> Join the Movement</h3>
+    <p>
+      Whether you're a concerned citizen, organization, or municipality, you can make a difference. Report trash, spread the word, and be part of the zero-waste movement!
+    </p>
+    <h3><i class="fas fa-map-marked-alt"></i> Pin It to Clean It</h3>
+<p>
+  Mark a location on the map where trash has been spotted by creating a pin. Once pinned, our community can take action to help clean it up together.
+</p>
+    <a href="map.php" class="call-to-action" aria-label="Submit a trash report">
+      <i class="fas fa-clipboard-check"></i> View Report Map
+    </a>
+  </aside>
 </div>
 
-</body>
-</html>
 
 <script>
   const fileInput = document.querySelector('input[type="file"]');
@@ -242,19 +176,27 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   fileInput.addEventListener('change', function () {
     const file = this.files[0];
-
     if (file) {
       const reader = new FileReader();
-
       reader.addEventListener("load", function () {
         previewImage.setAttribute("src", this.result);
         previewImage.style.display = "block";
       });
-
       reader.readAsDataURL(file);
     } else {
       previewImage.style.display = "none";
     }
   });
+
+
+    window.addEventListener('DOMContentLoaded', () => {
+    const mapButtonWrapper = document.querySelector('.map-button-wrapper');
+    if (mapButtonWrapper) {
+      mapButtonWrapper.classList.add('visible');
+    }
+  });
 </script>
+
+</body>
+</html>
 

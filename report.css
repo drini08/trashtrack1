@@ -1,0 +1,261 @@
+/* Basic body and layout */
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f7f4;
+  padding: 40px 20px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Layout wrapper */
+.page-wrapper {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Side Panels */
+.side-panel {
+  flex: 1;
+  max-width: 480px;
+  padding: 25px 50px 30px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  color: #2c3e50;
+  font-size: 15px;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(20px);
+  animation-fill-mode: forwards;
+  min-height: 400px;
+  flex-direction: column;
+  display: flex;
+  
+}
+
+.side-panel.left-panel {
+  background: linear-gradient(135deg, #d7f0f7, #93c9d7);
+  animation: fadeSlideInLeft 0.8s ease forwards;
+}
+
+.side-panel.right-panel {
+  background: linear-gradient(135deg, #d7f0f7, #93c9d7);
+  animation: fadeSlideInRight 0.8s ease forwards;
+}
+
+@keyframes fadeSlideInLeft {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideInRight {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.side-panel h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #1f3a3a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.side-panel h3 i {
+  color: #28a745;
+  font-size: 20px;
+}
+
+/* FAQ styling */
+.faq-list {
+  margin: 0;
+  padding-left: 15px;
+}
+
+.faq-list li {
+  margin-bottom: 10px;
+}
+
+/* Call-to-action link */
+.call-to-action {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #59d0bc, #1a9873);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+}
+
+.call-to-action:hover {
+  background-color: #218838;
+}
+
+/* Main form container */
+.container {
+  flex: 2;
+  max-width: 550px;
+  background:white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+/* Form styles */
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+  width: 100%;
+  max-width: 440px;
+  padding: 15px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background: #f9fbfd;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+input[type="file"]:focus {
+  border-color: #28a745;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+input[type="submit"] {
+  background: #28a745;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background: #218838;
+}
+
+.message {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Image preview */
+#preview-image {
+  display: none;
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+/* Back button styles */
+.back-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3a7d44;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.back-button:hover {
+  background-color: #519b59;
+}
+
+.back-button svg {
+  fill: white;
+  width: 24px;
+  height: 24px;
+}
+
+.map-button-wrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.map-button-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.view-map-button {
+  background-color: #27a517;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.view-map-button:hover {
+  background-color: #1b700e;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

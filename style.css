@@ -53,6 +53,12 @@ body {
   justify-content: flex-end;
 }
 
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+  color: #00b96b;
+}
+
 .nav-list {
   list-style: none;
   display: flex;
