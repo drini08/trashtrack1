@@ -29,8 +29,8 @@
         <li><a href="aboutus.php" class="active">About Us</a></li>
         <li><a href="map.php">Map</a></li>
         <li><a href="report.php"> Submit Report</a></li>
-        <li><a href="login.php" class="btn login-btn">Admin Login</a></li>
-        <li class="signup"><a href="signup.php" class="btn signup-btn">Admin Sign Up</a></li>
+        <li><a href="login.php" class="btn login-btn">Login</a></li>
+        <li class="signup"><a href="signup.php" class="btn signup-btn">Sign Up</a></li>
       </ul>
     </nav>
   </div>

@@ -117,7 +117,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <ul class="faq-list">
       <li><strong>Can I report anonymously?</strong> Yes, no personal info is required.</li>
       <li><strong>What locations can I report?</strong> Any public places where trash is an issue.</li>
-      <li><strong>Is photo upload mandatory?</strong> It helps, but you can still report without it.</li>
     </ul>
 
     <a href="index.php" class="call-to-action" aria-label="Return to homepage">
@@ -200,4 +199,3 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 </body>
 </html>
-
