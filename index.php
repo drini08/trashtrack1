@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/png" href="images/icon.png"/>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Zero Waste - TrashTrack Kosovo: Leading sustainable waste management solutions in Kosovo">
@@ -30,8 +31,8 @@
           <li><a href="aboutus.php">About Us</a></li>
           <li><a href="map.php">Map</a></li>
           <li><a href="report.php">Submit Report</a></li>
-          <li><a href="login.php" class="btn login-btn">Login</a></li>
-          <li><a href="signup.php" class="btn signup-btn">Sign Up</a></li>
+          <li><a href="login.php" class="btn login-btn">Admin Login</a></li>
+          <li class="signup"><a href="signup.php" class="btn signup-btn">Admin Sign Up</a></li>
         </ul>
       </nav>
     </div>

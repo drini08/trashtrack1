@@ -95,6 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 />
 <!-- Link to the external CSS -->
 <link rel="stylesheet" href="report.css" />
+<link rel="icon" type="image/png" href="images/icon.png"/>
 </head>
 <body>
 

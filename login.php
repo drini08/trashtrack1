@@ -51,6 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <title>Admin Login</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="login.css" rel="stylesheet"/>
+  <link rel="icon" type="image/png" href="images/icon.png"/>
   
 </head>
 <body>

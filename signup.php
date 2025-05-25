@@ -55,6 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <!-- Bootstrap CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="signup.css" rel="stylesheet"/>
+  <link rel="icon" type="image/png" href="images/icon.png"/>
   <style>
    
   </style>

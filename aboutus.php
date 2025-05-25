@@ -11,6 +11,7 @@
   <link href="aboutus.css" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/icon.png"/>
   
 </head>
 <body class="about">
@@ -28,8 +29,8 @@
         <li><a href="aboutus.php" class="active">About Us</a></li>
         <li><a href="map.php">Map</a></li>
         <li><a href="report.php"> Submit Report</a></li>
-        <li><a href="login.php" class="btn login-btn">Login</a></li>
-        <li><a href="signup.php" class="btn signup-btn">Sign Up</a></li>
+        <li><a href="login.php" class="btn login-btn">Admin Login</a></li>
+        <li class="signup"><a href="signup.php" class="btn signup-btn">Admin Sign Up</a></li>
       </ul>
     </nav>
   </div>

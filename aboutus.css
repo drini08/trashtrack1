@@ -277,3 +277,9 @@ body.about {
   background-color: #009f58;
 }
 
+.signup {
+  border: solid 1.5px black;
+  border-radius: 8px;
+  padding: 3px;
+}
+

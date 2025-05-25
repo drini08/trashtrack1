@@ -67,8 +67,9 @@
     }
 
     .delete-link {
-      color: #e74c3c;
+      color: #554644;
       color: black;
+      padding: 20px;
     }
 
     .delete-link:hover {
@@ -87,4 +88,9 @@
   color: white !important;
   text-decoration: none !important;
   box-shadow: 0 0 8px rgba(33, 136, 56, 0.7) !important;
+}
+
+.btn btn-danger btn-sm mb-1 {
+  min-width: 120px;
+  gap: 10px;
 }
